@@ -17,7 +17,6 @@ fs.ensureDirSync = function (dir) {
 };
 
 module.exports = {
-
   /**
      * Used to get the name of the application as defined in the config.xml.
      *
@@ -35,19 +34,6 @@ module.exports = {
      */
   getPluginId: function () {
     return "cordova-plugin-firebase";
-  },
-
-  /**
-     * Used to get the path to the XCode project's .pbxproj file.
-     *
-     * @param {object} context - The Cordova context.
-     * @returns The path to the XCode project's .pbxproj file.
-     */
-  getXcodeProjectPath: function (context) {
-
-    var appName = this.getAppName(context);
-
-    return path.join("platforms", "ios", appName + ".xcodeproj", "project.pbxproj");
   },
 
   copyKey: function (platform) {
